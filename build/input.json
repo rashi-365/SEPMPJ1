@@ -3,6 +3,9 @@
   "sources": {
     "contracts/helloworld.sol": {
       "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ncontract helloworld{\r\n    string public greet = \"helloworld\";\r\n}"
+    },
+    "contracts/VaultHelloWorld.sol": {
+      "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ncontract helloworld{\r\n    string public greet = \"helloworld\";\r\n}"
     }
   },
   "settings": {
