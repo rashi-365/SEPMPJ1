@@ -1,24 +1,29 @@
 {
-  "name": "feature_3022411009_vault_app",
+  "name": "vault-app",
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "prepare-input": "node scripts/build-input.js",
-    "compile": "npm run prepare-input && docker compose run --rm solc"
+    "prepare-input": "node scripts/build-input.cjs",
+    "compile": "npm run prepare-input && docker compose run --rm solc",
+    "deploy": "node scripts/deploy.js"
   },
   "dependencies": {
-    "@openzeppelin/contracts": "5.1.0"
+    "@openzeppelin/contracts": "5.1.0",
+    "dotenv": "^18.0.9"
   },
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vandanaunipune-del/sepm_project_submission.git"
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ethers": "^4.2.1",
+    "@nomicfoundation/hardhat-ignition": "^3.1.9",
+    "@nomicfoundation/hardhat-toolbox-mocha-ethers": "^4.0.0",
+    "@types/chai": "^5.2.3",
+    "@types/chai-as-promised": "^8.0.2",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.20.5",
+    "chai": "^6.3.0",
+    "ethers": "^6.17.0",
+    "hardhat": "^3.21.0",
+    "mocha": "^12.0.3",
+    "typescript": "~6.0.3"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/vandanaunipune-del/sepm_project_submission/issues"
-  },
-  "homepage": "https://github.com/vandanaunipune-del/sepm_project_submission#readme",
-  "description": ""
+  "type": "module"
 }
